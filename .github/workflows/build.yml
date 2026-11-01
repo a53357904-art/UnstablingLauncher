@@ -1,28 +1,34 @@
 name: Build UnstablingLauncher
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - name: Get source
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install .NET
+      - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
 
-      - name: Build EXE
+      - name: Build Launcher
         run: dotnet publish UnstablingLauncher.csproj -c Release -r win-x64 --self-contained true
 
-      - name: Upload EXE
+      - name: Install Inno Setup
+        run: choco install innosetup --yes --no-progress
+
+      - name: Create Installer
+        run: iscc installer.iss
+
+      - name: Upload Installer
         uses: actions/upload-artifact@v4
         with:
-          name: UnstablingLauncher-Windows
-          path: bin/Release/net8.0-windows/win-x64/publish/
+          name: UnstablingLauncher-Setup
+          path: installer/UnstablingLauncher-Setup.exe
