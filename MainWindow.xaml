@@ -1,0 +1,83 @@
+<Window x:Class="UnstablingLauncher.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="UnstablingLauncher"
+ Height="720" Width="1100"
+ Background="#101116"
+ WindowStartupLocation="CenterScreen">
+
+<Grid>
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="220"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+
+<!-- SOL MENÜ -->
+<Border Background="#171820">
+<StackPanel Margin="20">
+
+<TextBlock Text="UNSTABLING"
+ Foreground="White"
+ FontSize="22"
+ FontWeight="Bold"/>
+
+<TextBlock Text="LAUNCHER"
+ Foreground="#A78BFA"
+ FontSize="12"
+ Margin="0,0,0,35"/>
+
+<Button Content="⌂  Ana Sayfa" Margin="0,5"/>
+<Button Content="▦  Sürümler" Margin="0,5"/>
+<Button Content="▧  Modlar" Margin="0,5"/>
+<Button Content="▤  Kaynak Paketleri" Margin="0,5"/>
+<Button Content="⚙  Ayarlar" Margin="0,5"/>
+
+</StackPanel>
+</Border>
+
+<!-- ANA EKRAN -->
+<Grid Grid.Column="1" Margin="30">
+
+<StackPanel>
+
+<TextBlock Text="Ana Sayfa"
+ Foreground="White"
+ FontSize="30"
+ FontWeight="Bold"/>
+
+<TextBlock Text="Minecraft deneyimini yönet."
+ Foreground="#999999"
+ Margin="0,5,0,30"/>
+
+<Border Background="#252039"
+ CornerRadius="15"
+ Padding="30"
+ Height="300">
+
+<StackPanel VerticalAlignment="Center">
+
+<TextBlock Text="UNSTABLING LAUNCHER"
+ Foreground="#A78BFA"
+ FontSize="14"/>
+
+<TextBlock Text="Oyuna hazır mısın?"
+ Foreground="White"
+ FontSize="35"
+ FontWeight="Bold"
+ Margin="0,15"/>
+
+<Button Content="▶  Minecraft'ı Başlat"
+ Background="#8B5CF6"
+ Foreground="White"
+ Width="200"
+ HorizontalAlignment="Left"
+ Padding="12"/>
+
+</StackPanel>
+</Border>
+
+</StackPanel>
+</Grid>
+
+</Grid>
+</Window>
