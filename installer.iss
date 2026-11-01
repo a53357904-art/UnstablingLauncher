@@ -1,5 +1,5 @@
 [Setup]
-AppId=UnstablingLauncher
+AppId={{A7B8C9D0-1234-4567-8901-123456789ABC}
 AppName=UnstablingLauncher
 AppVersion=1.0.0
 AppPublisher=UnstablingLauncher
@@ -7,7 +7,6 @@ DefaultDirName={autopf}\UnstablingLauncher
 DefaultGroupName=UnstablingLauncher
 OutputDir=installer
 OutputBaseFilename=UnstablingLauncher-Setup
-SetupIconFile=
 PrivilegesRequired=admin
 UninstallDisplayIcon={app}\UnstablingLauncher.exe
 ArchitecturesInstallIn64BitMode=x64
